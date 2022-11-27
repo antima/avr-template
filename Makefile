@@ -5,9 +5,10 @@ OBJS=$(SRCS:%.c=build/%.o)
 INC=-I ./inc
 
 # MCU configuration
-MCU=              # <-- Set the MCU type
-CLOCK_FREQ=       # <-- Set the clock frequency
-PROG_STR=atmelice # <-- Set the programmer
+# Set MCU type, clock frequency and programmer
+MCU=
+CLOCK_FREQ=
+PROG_STR=atmelice
 
 # Compiler flags
 CFLAGS=-std=c11 -Wall -Wextra -Werror -mmcu=$(MCU) -DF_CPU=$(CLOCK_FREQ)
@@ -18,7 +19,7 @@ OBJCOPY=avr-objcopy
 CC=avr-gcc
 
 # Project configuration
-PROJ_NAME=template_project         # <-- Set the project name
+PROJ_NAME=template_project
 PROJ_BLD=$(BUILD_DIR)/$(PROJ_NAME)
 
 # Rules

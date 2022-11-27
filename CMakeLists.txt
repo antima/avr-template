@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.22)
 set(CMAKE_TRY_COMPILE_TARGET_TYPE "STATIC_LIBRARY")
 set(CMAKE_SYSTEM_NAME "Generic")
 set(CMAKE_GENERATOR "Unix Makefiles")
-project(template_project C) # <-- Set the project name
+project(template_project C) # Set the project name
 
 # Default to Debug build
 if (NOT CMAKE_BUILD_TYPE)
@@ -10,9 +10,10 @@ if (NOT CMAKE_BUILD_TYPE)
 endif()
 
 # MCU configuration
-set(MCU "")             # <-- Set the MCU type
-set(CLOCK_FREQ "")      # <-- Set the clock frequency
-set(PROG_STR atmelice)  # <-- Set the programmer
+# Set MCU type, clock frequency and programmer
+set(MCU "")
+set(CLOCK_FREQ "")
+set(PROG_STR atmelice)
 
 
 # C compiler flags
